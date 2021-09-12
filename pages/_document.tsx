@@ -8,11 +8,24 @@ class MyDocument extends Document {
     return (
       <Html lang={appConfig.locale}>
         <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap"
             rel="stylesheet"
           />
-          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body className="scrollbar scrollbar-thin scrollbar-thumb-primary-500 scrollbar-track-primary-100">
           <Main />

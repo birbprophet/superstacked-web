@@ -11,11 +11,18 @@ module.exports = {
       transparent: "transparent",
       current: "currentColor",
       primary: colors.sky,
+      gray: {
+        ...colors.blueGray,
+        850: "#172033",
+        750: "#293548",
+        350: "#B0BCCD",
+      },
     },
     extend: {
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
         serif: ["Domine", ...defaultTheme.fontFamily.serif],
+        mono: ["Fira Code", ...defaultTheme.fontFamily.mono],
       },
     },
   },

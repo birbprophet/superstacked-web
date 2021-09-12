@@ -5,13 +5,14 @@
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
+    background: #1e293b;
   }
   ::selection {
-    background: #E0F2FE;
+    background: #e0f2fe;
     color: #075985;
   }
   ::-moz-selection {
-    background: #E0F2FE;
+    background: #e0f2fe;
     color: #075985;
   }
 }
