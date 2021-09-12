@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  ::selection {
+    background: #E0F2FE;
+    color: #075985;
+  }
+  ::-moz-selection {
+    background: #E0F2FE;
+    color: #075985;
+  }
+}
