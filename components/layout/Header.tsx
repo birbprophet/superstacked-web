@@ -216,7 +216,7 @@ export default function Example() {
             </Popover.Group>
             <div className="flex items-center md:ml-12">
               <Link href="/signup">
-                <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-600 hover:bg-primary-500">
+                <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-700 hover:bg-primary-600">
                   Get Started
                 </a>
               </Link>
