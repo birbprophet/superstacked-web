@@ -4,7 +4,6 @@
 #
 # The site is deployed each time commits are pushed. The environment to which the changes are deployed
 # is based on the following rules:
-#
 # 1.) When pushing to master, changes deployed to the "staging" environment. This environment does not exist
 #     by default. You must create it using https://app.layer0.co.
 # 2.) When pushing to any other branch, changes are deployed to the default environment. A unique URL is created based on the branch and deployment number.
