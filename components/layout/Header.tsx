@@ -185,28 +185,41 @@ export default function Header(props) {
                     </Popover.Button>
                   </div>
                 </div>
-                <div className="mt-6">
+                <div className="mt-8">
                   <nav className="grid gap-6">
-                    {data.allServices.map((item) => {
-                      <Link
-                        key={item.title}
-                        href={`/service#${item.title.toLowerCase()}`}
-                      >
-                        <a className="-m-3 flex items-center p-3 rounded-lg hover:bg-gray-700">
-                          <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-600 text-white sm:h-12 sm:w-12">
-                            <item.icon className="h-6 w-6" aria-hidden="true" />
-                          </div>
-                          <div className="ml-4 text-base font-medium text-gray-100">
-                            {item.title}
-                          </div>
-                        </a>
-                      </Link>;
-                    })}
+                    {data.allServices
+                      .map((item) => ({
+                        ...item,
+                        icon: iconStringToIcon(item.icon),
+                      }))
+                      .map((item) => (
+                        <Link
+                          key={item.title}
+                          href={`/service#${item.title.toLowerCase()}`}
+                        >
+                          <a className="-m-3 flex items-center p-3 rounded-lg hover:bg-gray-700">
+                            <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-600 text-white sm:h-12 sm:w-12">
+                              <item.icon
+                                className="h-6 w-6"
+                                aria-hidden="true"
+                              />
+                            </div>
+                            <div className="ml-4 text-base font-medium text-gray-100">
+                              {item.title}
+                            </div>
+                          </a>
+                        </Link>
+                      ))}
                   </nav>
                 </div>
               </div>
               <div className="py-6 px-5">
                 <div className="grid grid-cols-2 gap-4">
+                  <Link href={"/services"}>
+                    <a className="text-base font-medium text-gray-100 hover:text-gray-200">
+                      Services
+                    </a>
+                  </Link>
                   {LINKS.map(({ name, href }) => (
                     <Link key={href} href={href}>
                       <a className="text-base font-medium text-gray-100 hover:text-gray-200">
@@ -216,12 +229,11 @@ export default function Header(props) {
                   ))}
                 </div>
                 <div className="mt-6">
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-600 hover:bg-primary-500"
-                  >
-                    Sign up
-                  </a>
+                  <Link href="/start">
+                    <a className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-600 hover:bg-primary-500">
+                      Get Started
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
