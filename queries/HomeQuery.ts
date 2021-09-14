@@ -10,12 +10,36 @@ query MyQuery($locale: SiteLocale = en) {
     }
   }
   allServices {
-    title
-    description
+    title(locale: $locale)
+    description(locale: $locale)
     icon
   }
   page: home(locale: $locale) {
-    heroDescription
+    seoDescription(locale: $locale)
+    seoTitle(locale: $locale)
+    heroDescription(locale: $locale)
+    processTitle(locale: $locale)
+    processPart1Label(locale: $locale)
+    processPart1Title(locale: $locale)
+    processPart1Description(locale: $locale)
+    processPart1Blocks(locale: $locale) {
+      title
+      description
+    }
+    processPart2Label(locale: $locale)
+    processPart2Title(locale: $locale)
+    processPart2Description(locale: $locale)
+    processPart2Blocks(locale: $locale) {
+      title
+      description
+    }
+    processPart3Label(locale: $locale)
+    processPart3Title(locale: $locale)
+    processPart3Description(locale: $locale)
+    processPart3Blocks(locale: $locale) {
+      title
+      description
+    }
   }
 }
 `;
