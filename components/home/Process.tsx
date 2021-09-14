@@ -18,7 +18,7 @@ export default function Process(props) {
             {data.page.processPart1Label}
           </div>
         </div>
-        <div className="text-4xl sm:text-6xl lg:text-7xl text-gray-100 leading-none font-extrabold tracking-tight mt-6 sm:mt-8 mb-10 sm:mb-8">
+        <div className="text-4xl sm:text-6xl lg:text-7xl text-gray-100 font-serif leading-none font-extrabold  mt-6 sm:mt-8 mb-10 sm:mb-8">
           {data.page.processPart1Title}
         </div>
         <div className="max-w-4xl mx-auto text-center text-2xl leading-9 font-normal text-gray-400 flex flex-col space-y-8">
@@ -66,7 +66,7 @@ export default function Process(props) {
             {data.page.processPart2Label}
           </div>
         </div>
-        <div className="text-4xl sm:text-6xl lg:text-7xl text-gray-100 leading-none font-extrabold tracking-tight mt-6 sm:mt-8 mb-10 sm:mb-8">
+        <div className="text-4xl sm:text-6xl lg:text-7xl text-gray-100 font-serif leading-none font-extrabold  mt-6 sm:mt-8 mb-10 sm:mb-8">
           {data.page.processPart2Title}
         </div>
         <div className="max-w-4xl mx-auto text-center text-2xl leading-9 font-normal text-gray-400 flex flex-col space-y-8">
@@ -114,7 +114,7 @@ export default function Process(props) {
             {data.page.processPart3Label}
           </div>
         </div>
-        <div className="text-4xl sm:text-6xl lg:text-7xl text-gray-100 leading-none font-extrabold tracking-tight mt-6 sm:mt-8 mb-10 sm:mb-8">
+        <div className="text-4xl sm:text-6xl lg:text-7xl text-gray-100 font-serif leading-none font-extrabold  mt-6 sm:mt-8 mb-10 sm:mb-8">
           {data.page.processPart3Title}
         </div>
         <div className="max-w-4xl mx-auto text-center text-2xl leading-9 font-normal text-gray-400 flex flex-col space-y-8">
@@ -162,7 +162,7 @@ export default function Process(props) {
             {data.page.processPart4Label}
           </div>
         </div>
-        <div className="text-4xl sm:text-6xl lg:text-7xl text-gray-100 leading-none font-extrabold tracking-tight mt-6 sm:mt-8 mb-10 sm:mb-8">
+        <div className="text-4xl sm:text-6xl lg:text-7xl text-gray-100 font-serif leading-none font-extrabold  mt-6 sm:mt-8 mb-10 sm:mb-8">
           {data.page.processPart4Title}
         </div>
         <div className="max-w-4xl mx-auto text-center text-2xl leading-9 font-normal text-gray-400 flex flex-col space-y-8">

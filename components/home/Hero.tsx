@@ -39,7 +39,7 @@ export default function Hero(props) {
           </div>
         </div>
 
-        <h1 className="text-5xl tracking-tight font-extrabold text-white sm:text-7xl md:text-[5rem]">
+        <h1 className="text-5xl tracking-tight font-extrabold text-white sm:text-7xl md:text-[5rem] font-serif">
           We build <br className="inline sm:hidden" />
           <span className="text-transparent bg-gradient-to-br from-primary-400 to-primary-200 bg-clip-text">
             super fast
