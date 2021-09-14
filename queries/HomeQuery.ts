@@ -18,6 +18,14 @@ query MyQuery($locale: SiteLocale = en) {
     seoDescription(locale: $locale)
     seoTitle(locale: $locale)
     heroDescription(locale: $locale)
+    logoCloudTitle(locale: $locale)
+    logoCloud {
+      name
+      url
+      logo {
+        url
+      }
+    }
     processTitle(locale: $locale)
     processPart1Label(locale: $locale)
     processPart1Title(locale: $locale)
@@ -40,6 +48,9 @@ query MyQuery($locale: SiteLocale = en) {
       title
       description
     }
+    processPart4Label(locale: $locale)
+    processPart4Title(locale: $locale)
+    processPart4Description(locale: $locale)
   }
 }
 `;

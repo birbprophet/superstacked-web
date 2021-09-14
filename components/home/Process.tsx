@@ -103,26 +103,22 @@ export default function Process(props) {
       </div>
       <div className="flex flex-col text-center items-center">
         <div
-          className="h-32 w-0.5 bg-gradient-to-b from-transparent sm:from-primary-300 to-primary-400"
-          id="distribute"
+          className="h-32 w-0.5 bg-gradient-to-b from-primary-300 to-primary-400"
+          id={data.page.processPart3Label.toLowerCase()}
         ></div>
         <div className="h-10 w-10 rounded-full flex bg-gradient-to-br from-primary-400 to-primary-600">
-          <div className="text-white text-lg font-bold m-auto">3</div>
+          <div className="text-white text-lg font-bold m-auto">2</div>
         </div>
         <div className="mt-4">
           <div className="font-bold text-3xl text-transparent bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text">
-            Collect
+            {data.page.processPart3Label}
           </div>
         </div>
         <div className="text-4xl sm:text-6xl lg:text-7xl text-gray-100 leading-none font-extrabold tracking-tight mt-6 sm:mt-8 mb-10 sm:mb-8">
-          Collect when ready
+          {data.page.processPart3Title}
         </div>
         <div className="max-w-4xl mx-auto text-center text-2xl leading-9 font-normal text-gray-400 flex flex-col space-y-8">
-          <p>
-            When your order is ready for pickup, we will send you a
-            notification. Show your order number to the staff at the store to
-            collect your order.
-          </p>
+          <p>{data.page.processPart3Description}</p>
         </div>
         <div className="max-w-5xl sm:flex w-full mt-4">
           <div className="hidden sm:grid flex-1 px-4 sm:px-10 pt-14">
@@ -156,24 +152,21 @@ export default function Process(props) {
       <div className="flex flex-col text-center items-center">
         <div
           className="h-32 w-0.5 bg-gradient-to-b from-transparent sm:from-primary-300 to-primary-400"
-          id="scale"
+          id={data.page.processPart4Label.toLowerCase()}
         ></div>
         <div className="h-10 w-10 rounded-full flex bg-gradient-to-br from-primary-400 to-primary-600">
           <div className="text-white text-lg font-bold m-auto">+</div>
         </div>
         <div className="mt-4">
           <div className="font-bold text-3xl text-transparent bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text">
-            Share
+            {data.page.processPart4Label}
           </div>
         </div>
         <div className="text-4xl sm:text-6xl lg:text-7xl text-gray-100 leading-none font-extrabold tracking-tight mt-6 sm:mt-8 mb-10 sm:mb-8">
-          Share it with friends
+          {data.page.processPart4Title}
         </div>
         <div className="max-w-4xl mx-auto text-center text-2xl leading-9 font-normal text-gray-400 flex flex-col space-y-8">
-          <p>
-            Add your friends to the app as dabao buddies, and develop the
-            community spirit by helping each other collect your orders.
-          </p>
+          <p>{data.page.processPart4Description}</p>
         </div>
       </div>
     </div>

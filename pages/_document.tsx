@@ -27,7 +27,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="scrollbar scrollbar-thin scrollbar-thumb-primary-500 scrollbar-track-primary-100">
+        <body className="scrollbar scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-700">
           <Main />
           <NextScript />
         </body>
