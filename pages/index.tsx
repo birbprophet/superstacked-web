@@ -2,6 +2,7 @@ import DatoCmsMetadata from "@/components/meta/DatoCmsMetadata";
 import Header from "@/components/layout/Header";
 import { HOME_QUERY } from "@/queries/HomeQuery";
 import { datoCmsRequest } from "@/scripts/datocms";
+import Hero from "@/components/home/Hero";
 
 export async function getStaticProps(context) {
   const data = await datoCmsRequest({
@@ -20,6 +21,7 @@ export default function Home(props) {
     <>
       <DatoCmsMetadata {...{ data, pageData: data.home }} />
       <Header {...{ data }} />
+      <Hero {...{ data }} />
     </>
   );
 }

@@ -10,7 +10,7 @@ module.exports = {
       ...defaultTheme.colors,
       transparent: "transparent",
       current: "currentColor",
-      primary: colors.sky,
+      primary: { ...colors.sky, 650: "#0377B4" },
       gray: {
         ...colors.blueGray,
         850: "#172033",

@@ -14,8 +14,8 @@ const LINKS = [
     href: "/about",
   },
   {
-    name: "Technology",
-    href: "/tech",
+    name: "Portfolio",
+    href: "/portfolio",
   },
   {
     name: "Contact",
@@ -143,7 +143,7 @@ export default function Header(props) {
             </Popover.Group>
             <div className="flex items-center md:ml-12">
               <Link href="/start">
-                <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-700 hover:bg-primary-600">
+                <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-650 hover:bg-primary-700">
                   Get Started
                 </a>
               </Link>
@@ -230,7 +230,7 @@ export default function Header(props) {
                 </div>
                 <div className="mt-6">
                   <Link href="/start">
-                    <a className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-600 hover:bg-primary-500">
+                    <a className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-650 hover:bg-primary-700">
                       Get Started
                     </a>
                   </Link>

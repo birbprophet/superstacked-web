@@ -1,5 +1,5 @@
 export const HOME_QUERY = `
-query HomeQuery($locale: SiteLocale = en) {
+query MyQuery($locale: SiteLocale = en) {
   site: _site(locale: $locale) {
     globalSeo {
       siteName
@@ -14,8 +14,7 @@ query HomeQuery($locale: SiteLocale = en) {
     description
     icon
   }
-  home(locale: $locale) {
-    heroTitle
+  page: home(locale: $locale) {
     heroDescription
   }
 }
