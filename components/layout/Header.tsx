@@ -33,9 +33,9 @@ export default function Header(props) {
             <Link href="/">
               <a className="flex items-center">
                 <span className="sr-only">SuperStacked</span>
-                <Logo className="h-10 w-10 sm:h-12 sm:w-12" />
-                <span className="ml-3 inline text-xl sm:text-2xl md:hidden lg:inline font-bold text-white font-mono">
-                  superstacked_
+                <Logo className="h-12 w-12" />
+                <span className="ml-3 mb-1.5 inline text-2xl md:hidden lg:inline font-bold text-primary-50 font-serif underline underline-thickness-1 decoration-gray-500">
+                  <span className="text-primary-200">super</span>stacked
                 </span>
               </a>
             </Link>
@@ -143,7 +143,7 @@ export default function Header(props) {
             </Popover.Group>
             <div className="flex items-center md:ml-12">
               <Link href="/start">
-                <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-650 hover:bg-primary-700">
+                <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-5 py-2.5 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-650 hover:bg-primary-700">
                   Get Started
                 </a>
               </Link>
@@ -170,10 +170,10 @@ export default function Header(props) {
                   <div>
                     <Link href="/">
                       <a className="flex items-center">
-                        <span className="sr-only">Automatical</span>
-                        <Logo className="text-gray-100 h-10 w-10" />
-                        <span className="ml-3 text-xl font-bold text-white font-mono">
-                          superstacked_
+                        <span className="sr-only">SuperStacked</span>
+                        <Logo className="h-12 w-12" />
+                        <span className="ml-3 mb-1.5 inline text-2xl md:hidden lg:inline font-bold text-primary-50 font-serif underline underline-thickness-1 decoration-gray-500">
+                          <span className="text-primary-200">super</span>stacked
                         </span>
                       </a>
                     </Link>

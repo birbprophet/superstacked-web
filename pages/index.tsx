@@ -3,8 +3,9 @@ import Header from "@/components/layout/Header";
 import { HOME_QUERY } from "@/queries/HomeQuery";
 import { datoCmsRequest } from "@/scripts/datocms";
 import Hero from "@/components/home/Hero";
-import Process from "@/components/home/Process";
 import LogoCloud from "@/components/home/LogoCloud";
+import Process from "@/components/home/Process";
+import DisplayCta from "@/components/home/DisplayCta";
 
 export async function getStaticProps(context) {
   const data = await datoCmsRequest({
@@ -12,6 +13,7 @@ export async function getStaticProps(context) {
     variables: { locale: "en" },
     preview: context.preview,
   });
+
   return {
     props: { data },
   };
@@ -26,6 +28,7 @@ export default function Home(props) {
       <Hero {...{ data }} />
       <LogoCloud {...{ data }} />
       <Process {...{ data }} />
+      <DisplayCta {...{ data }} />
     </>
   );
 }

@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 export default function Process(props) {
   const { data } = props;
   return (
-    <div className="flex flex-col py-28 sm:pt-36 items-center">
+    <div className="flex flex-col pt-28 pb-14 sm:pb-20 sm:pt-36 items-center">
       <div className="text-gray-100 font-bold uppercase text-sm tracking-widest">
         {data.page.processTitle}
       </div>
@@ -14,7 +16,7 @@ export default function Process(props) {
           <div className="text-white text-lg font-bold m-auto">1</div>
         </div>
         <div className="mt-4">
-          <div className="font-bold text-3xl text-transparent bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text">
+          <div className="font-bold text-3xl text-transparent bg-gradient-to-r from-primary-300 to-primary-500 bg-clip-text">
             {data.page.processPart1Label}
           </div>
         </div>
@@ -25,8 +27,17 @@ export default function Process(props) {
           <p>{data.page.processPart1Description}</p>
         </div>
         <div className="max-w-5xl sm:flex w-full mt-4">
-          <div className="hidden sm:grid flex-1 px-4 sm:px-10 pt-14">
-            <div className="w-full h-full object-cover rounded-2xl" />
+          <div className="hidden sm:flex flex-1 px-4 sm:px-10 mt-16">
+            <div className="m-auto">
+              <Image
+                src={data.page.processPart1Image.url}
+                title={data.page.processPart1Title}
+                alt={data.page.processPart1Title}
+                className="rounded-2xl object-cover overflow-hidden"
+                width={480}
+                height={720}
+              />
+            </div>
           </div>
           <div className="hidden sm:flex flex-col items-center mx-6">
             <div className="w-0.5 bg-gradient-to-b from-transparent to-gray-300 h-1/4"></div>
@@ -62,7 +73,7 @@ export default function Process(props) {
           <div className="text-white text-lg font-bold m-auto">2</div>
         </div>
         <div className="mt-4">
-          <div className="font-bold text-3xl text-transparent bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text">
+          <div className="font-bold text-3xl text-transparent bg-gradient-to-r from-primary-300 to-primary-500 bg-clip-text">
             {data.page.processPart2Label}
           </div>
         </div>
@@ -96,8 +107,17 @@ export default function Process(props) {
             <div className="rounded-full w-2 h-2 ring-2 ring-gray-500"></div>
             <div className="w-0.5 bg-gradient-to-b from-gray-500 to-primary-300 h-1/4"></div>
           </div>
-          <div className="hidden sm:grid flex-1 px-4 sm:px-10 pt-14">
-            <div className="w-full h-full object-cover rounded-2xl" />
+          <div className="hidden sm:flex flex-1 px-4 sm:px-10 mt-16">
+            <div className="m-auto">
+              <Image
+                src={data.page.processPart1Image.url}
+                title={data.page.processPart1Title}
+                alt={data.page.processPart1Title}
+                className="rounded-2xl object-cover overflow-hidden"
+                width={480}
+                height={720}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -110,7 +130,7 @@ export default function Process(props) {
           <div className="text-white text-lg font-bold m-auto">2</div>
         </div>
         <div className="mt-4">
-          <div className="font-bold text-3xl text-transparent bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text">
+          <div className="font-bold text-3xl text-transparent bg-gradient-to-r from-primary-300 to-primary-500 bg-clip-text">
             {data.page.processPart3Label}
           </div>
         </div>
@@ -121,8 +141,17 @@ export default function Process(props) {
           <p>{data.page.processPart3Description}</p>
         </div>
         <div className="max-w-5xl sm:flex w-full mt-4">
-          <div className="hidden sm:grid flex-1 px-4 sm:px-10 pt-14">
-            <div className="w-full h-full object-cover rounded-2xl" />
+          <div className="hidden sm:flex flex-1 px-4 sm:px-10 mt-16">
+            <div className="m-auto">
+              <Image
+                src={data.page.processPart1Image.url}
+                title={data.page.processPart1Title}
+                alt={data.page.processPart1Title}
+                className="rounded-2xl object-cover overflow-hidden"
+                width={480}
+                height={720}
+              />
+            </div>
           </div>
           <div className="hidden sm:flex flex-col items-center mx-6">
             <div className="w-0.5 bg-gradient-to-b from-transparent to-gray-300 h-1/4"></div>
@@ -158,7 +187,7 @@ export default function Process(props) {
           <div className="text-white text-lg font-bold m-auto">+</div>
         </div>
         <div className="mt-4">
-          <div className="font-bold text-3xl text-transparent bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text">
+          <div className="font-bold text-3xl text-transparent bg-gradient-to-r from-primary-300 to-primary-500 bg-clip-text">
             {data.page.processPart4Label}
           </div>
         </div>
