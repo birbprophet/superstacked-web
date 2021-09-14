@@ -4,7 +4,7 @@ export default function LogoCloud(props) {
   const { data } = props;
   return (
     <div className="text-center pt-24 pb-6">
-      <div className="text-gray-400 uppercase text-sm tracking-wider font-bold mb-8 md:text-base md:mb-10">
+      <div className="text-gray-400 uppercase text-sm tracking-wider font-semibold mb-8 md:text-base md:mb-10">
         {data.page.logoCloudTitle}
       </div>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
