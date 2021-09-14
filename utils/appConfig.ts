@@ -1,8 +1,8 @@
 const appConfig = {
-  site_name: "PasteMagic",
-  title: "PasteMagic",
+  site_name: "SuperStacked",
+  title: "SuperStacked",
   description:
-    "An AI-powered tool that automatically tags, sorts, and organise anything you paste into it",
+    "Maximize your business potential with performant sites and apps built with the latest, most innovative technologies",
   locale: "en",
 };
 export default appConfig;
