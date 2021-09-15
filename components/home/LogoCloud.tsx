@@ -29,6 +29,7 @@ export default function LogoCloud(props) {
             className="hidden col-span-1 md:flex justify-center md:col-span-1 lg:col-span-1"
             href={data.page.logoCloud[4].url}
             target="_blank"
+            rel="noopener"
           >
             <Image
               src={data.page.logoCloud[4].logo.url}
