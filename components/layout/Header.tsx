@@ -8,21 +8,6 @@ import Logo from "@/components/brand/Logo";
 import { iconStringToIcon } from "@/utils/iconUtils";
 import * as _ from "lodash";
 
-const LINKS = [
-  {
-    name: "About",
-    href: "/about",
-  },
-  {
-    name: "Portfolio",
-    href: "/portfolio",
-  },
-  {
-    name: "Contact",
-    href: "/contact",
-  },
-];
-
 export default function Header(props) {
   const { data } = props;
   return (
@@ -57,7 +42,7 @@ export default function Header(props) {
                         "group rounded-md inline-flex items-center text-base font-medium text-gray-300 hover:text-gray-100 focus:outline-none"
                       )}
                     >
-                      <span>Solutions</span>
+                      <span>{data.menu.servicesDropdownButtonText}</span>
                       <HeroIcons.ChevronDownIcon
                         className={classNames(
                           open ? "text-gray-100" : "text-gray-300",
@@ -109,23 +94,21 @@ export default function Header(props) {
                               ))}
                           </div>
                           <div className="p-5 bg-gray-900 sm:p-8">
-                            <a
-                              href="#"
-                              className="-m-3 p-3 flow-root rounded-md hover:bg-gray-850"
-                            >
-                              <div className="flex items-center">
-                                <div className="text-base font-medium text-gray-100">
-                                  Custom Project
+                            <Link href={`/contact`}>
+                              <a className="-m-3 p-3 flow-root rounded-md hover:bg-gray-850">
+                                <div className="flex items-center">
+                                  <div className="text-base font-medium text-gray-100">
+                                    {data.menu.customSectionTitle}
+                                  </div>
+                                  <span className="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-primary-100 text-primary-800">
+                                    {data.menu.customSectionBadge}
+                                  </span>
                                 </div>
-                                <span className="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-primary-100 text-primary-800">
-                                  Get in touch
-                                </span>
-                              </div>
-                              <p className="mt-1 text-sm text-gray-400">
-                                Every project is different. Have a custom
-                                project in mind? Let's talk.
-                              </p>
-                            </a>
+                                <p className="mt-1 text-sm text-gray-400">
+                                  {data.menu.customSectionDescription}
+                                </p>
+                              </a>
+                            </Link>
                           </div>
                         </div>
                       </Popover.Panel>
@@ -133,8 +116,8 @@ export default function Header(props) {
                   </>
                 )}
               </Popover>
-              {LINKS.map(({ name, href }) => (
-                <Link key={href} href={href}>
+              {data.menu.links.map(({ name, path }) => (
+                <Link key={path} href={path}>
                   <a className="text-base font-medium text-gray-300 hover:text-gray-100">
                     {name}
                   </a>
@@ -144,7 +127,7 @@ export default function Header(props) {
             <div className="flex items-center md:ml-12">
               <Link href="/start">
                 <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-5 py-2.5 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-650 hover:bg-primary-700">
-                  Get Started
+                  {data.menu.callToActionButtonText}
                 </a>
               </Link>
             </div>
@@ -217,11 +200,11 @@ export default function Header(props) {
                 <div className="grid grid-cols-2 gap-4">
                   <Link href={"/services"}>
                     <a className="text-base font-medium text-gray-100 hover:text-gray-200">
-                      Services
+                      {data.menu.servicesDropdownButtonText}
                     </a>
                   </Link>
-                  {LINKS.map(({ name, href }) => (
-                    <Link key={href} href={href}>
+                  {data.menu.link.map(({ name, path }) => (
+                    <Link key={path} href={path}>
                       <a className="text-base font-medium text-gray-100 hover:text-gray-200">
                         {name}
                       </a>
@@ -231,7 +214,7 @@ export default function Header(props) {
                 <div className="mt-6">
                   <Link href="/start">
                     <a className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-650 hover:bg-primary-700">
-                      Get Started
+                      {data.menu.callToActionButtonText}
                     </a>
                   </Link>
                 </div>

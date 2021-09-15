@@ -23,7 +23,7 @@ export default function Home(props) {
   const { data } = props;
   return (
     <>
-      <DatoCmsMetadata {...{ data, pageData: data.home }} />
+      <DatoCmsMetadata {...{ data }} />
       <Header {...{ data }} />
       <Hero {...{ data }} />
       <LogoCloud {...{ data }} />

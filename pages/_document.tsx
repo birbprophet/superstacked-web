@@ -22,10 +22,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap"
             rel="stylesheet"
           />
-          <link
+          {/* <link
             href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap"
             rel="stylesheet"
-          />
+          /> */}
         </Head>
         <body className="scrollbar scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-700">
           <Main />

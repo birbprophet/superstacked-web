@@ -9,22 +9,33 @@ query MyQuery($locale: SiteLocale = en) {
       }
     }
   }
-  allServices {
-    title(locale: $locale)
-    description(locale: $locale)
+  allServices(locale: $locale) {
+    title
+    description
     icon
   }
+  menu(locale: $locale) {
+    servicesDropdownButtonText
+    links {
+      name
+      path
+    }
+    customSectionTitle
+    customSectionBadge
+    customSectionDescription
+    callToActionButtonText
+  }
   page: home(locale: $locale) {
-    seoDescription(locale: $locale)
-    seoTitle(locale: $locale)
+    seoTitle
+    seoDescription
     promoSectionIcon
-    promoSectionMain(locale: $locale)
-    promoSectionCta(locale: $locale)
-    heroTitlePart1(locale: $locale)
-    heroTitlePart2(locale: $locale)
-    heroTitlePart3(locale: $locale)
-    heroDescription(locale: $locale)
-    logoCloudTitle(locale: $locale)
+    promoSectionMain
+    promoSectionCta
+    heroTitlePart1
+    heroTitlePart2
+    heroTitlePart3
+    heroDescription
+    logoCloudTitle
     logoCloud {
       name
       url
@@ -32,40 +43,40 @@ query MyQuery($locale: SiteLocale = en) {
         url
       }
     }
-    processTitle(locale: $locale)
-    processPart1Label(locale: $locale)
-    processPart1Title(locale: $locale)
-    processPart1Description(locale: $locale)
-    processPart1Blocks(locale: $locale) {
+    processTitle
+    processPart1Label
+    processPart1Title
+    processPart1Description
+    processPart1Blocks {
       title
       description
     }
     processPart1Image {
       url
     }
-    processPart2Label(locale: $locale)
-    processPart2Title(locale: $locale)
-    processPart2Description(locale: $locale)
-    processPart2Blocks(locale: $locale) {
+    processPart2Label
+    processPart2Title
+    processPart2Description
+    processPart2Blocks {
       title
       description
     }
     processPart2Image {
       url
     }
-    processPart3Label(locale: $locale)
-    processPart3Title(locale: $locale)
-    processPart3Description(locale: $locale)
-    processPart3Blocks(locale: $locale) {
+    processPart3Label
+    processPart3Title
+    processPart3Description
+    processPart3Blocks {
       title
       description
     }
     processPart3Image {
       url
     }
-    processPart4Label(locale: $locale)
-    processPart4Title(locale: $locale)
-    processPart4Description(locale: $locale)
+    processPart4Label
+    processPart4Title
+    processPart4Description
   }
 }
 `;

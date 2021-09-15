@@ -8,7 +8,7 @@ new Metrics({
     .match("/", ({ setPageLabel }) => setPageLabel("home"))
     .match("/services", ({ setPageLabel }) => setPageLabel("services"))
     .match("/about", ({ setPageLabel }) => setPageLabel("about"))
-    .match("/technology", ({ setPageLabel }) => setPageLabel("technology"))
+    .match("/portfolio", ({ setPageLabel }) => setPageLabel("portfolio"))
     .match("/contact", ({ setPageLabel }) => setPageLabel("contact"))
     .match("/start", ({ setPageLabel }) => setPageLabel("start")),
 }).collect();
