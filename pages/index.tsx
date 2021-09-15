@@ -6,6 +6,7 @@ import Hero from "@/components/home/Hero";
 import LogoCloud from "@/components/home/LogoCloud";
 import Process from "@/components/home/Process";
 import DisplayCta from "@/components/home/DisplayCta";
+import Features from "@/components/home/Features";
 
 export async function getStaticProps(context) {
   const data = await datoCmsRequest({
@@ -29,6 +30,7 @@ export default function Home(props) {
       <LogoCloud {...{ data }} />
       <Process {...{ data }} />
       <DisplayCta {...{ data }} />
+      <Features {...{ data }} />
     </>
   );
 }

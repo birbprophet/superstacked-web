@@ -14,9 +14,15 @@ export default function LogoCloud(props) {
               key={item.name}
               href={item.url}
               target="_blank"
-              className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1"
+              rel="noopener"
+              className="col-span-1 flex justify-center md:col-span-1 lg:col-span-1"
             >
-              <Image src={item.logo.url} height={80} width={240} />
+              <Image
+                src={item.logo.url}
+                height={80}
+                width={240}
+                alt={item.name}
+              />
             </a>
           ))}
           <a

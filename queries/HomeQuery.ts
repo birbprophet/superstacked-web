@@ -35,6 +35,8 @@ query MyQuery($locale: SiteLocale = en) {
     heroTitlePart2
     heroTitlePart3
     heroDescription
+    heroContactButtonText
+    heroAboutButtonText
     logoCloudTitle
     logoCloud {
       name

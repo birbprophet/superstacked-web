@@ -1,5 +1,8 @@
 import { Metrics } from "@layer0/rum";
 import Router from "@layer0/rum/Router";
+import { DefaultSeo } from "next-seo";
+import appConfig from "@/utils/appConfig";
+import Head from "next/head";
 import "@/styles/globals.css";
 
 new Metrics({
@@ -14,7 +17,28 @@ new Metrics({
 }).collect();
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+        />
+      </Head>
+      <DefaultSeo
+        title={appConfig.title}
+        description={appConfig.description}
+        openGraph={{
+          title: appConfig.title,
+          description: appConfig.description,
+          locale: appConfig.locale,
+          site_name: appConfig.site_name,
+          images: [{ url: "/android-chrome-512x512.png" }],
+        }}
+      />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;

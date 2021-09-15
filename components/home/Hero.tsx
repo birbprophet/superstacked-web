@@ -42,14 +42,14 @@ export default function Hero(props) {
           <div className="rounded-md shadow">
             <Link href="/contact">
               <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-650 hover:bg-primary-700 md:py-4 md:text-lg md:px-10">
-                Get in touch
+                {data.page.heroContactButtonText}
               </a>
             </Link>
           </div>
           <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
             <Link href="/about">
               <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-650 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
-                What we do
+                {data.page.heroAboutButtonText}
               </a>
             </Link>
           </div>

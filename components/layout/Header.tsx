@@ -203,7 +203,7 @@ export default function Header(props) {
                       {data.menu.servicesDropdownButtonText}
                     </a>
                   </Link>
-                  {data.menu.link.map(({ name, path }) => (
+                  {data.menu.links.map(({ name, path }) => (
                     <Link key={path} href={path}>
                       <a className="text-base font-medium text-gray-100 hover:text-gray-200">
                         {name}

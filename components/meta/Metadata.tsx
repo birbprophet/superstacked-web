@@ -18,6 +18,7 @@ const Meta = (props: IMetaProps) => {
           content="width=device-width,initial-scale=1"
           key="viewport"
         />
+        <meta name="theme-color" content="#075985" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
