@@ -16,15 +16,15 @@
   "dependencies": {
     "@headlessui/react": "1.4.1",
     "@heroicons/react": "1.0.4",
-    "graphql": "15.5.3",
-    "graphql-request": "3.5.0",
     "immer": "9.0.6",
     "lodash": "^4.17.21",
     "lottie-react": "2.1.0",
     "next": "11.1.2",
     "next-seo": "4.26.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-datocms": "^1.6.3",
+    "react-dom": "17.0.2",
+    "tiny-json-http": "^7.3.0"
   },
   "devDependencies": {
     "@layer0/cli": "3.16.10",
@@ -41,6 +41,7 @@
     "@types/node": "16.9.1",
     "@types/react": "17.0.20",
     "@types/sanitize-html": "^2.3.2",
+    "@types/tiny-json-http": "^7.3.1",
     "autoprefixer": "10.3.4",
     "commitizen": "4.2.4",
     "cross-env": "7.0.3",
@@ -48,6 +49,7 @@
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
     "glob-parent": "6.0.1",
+    "next-offline": "^5.0.5",
     "postcss": "8.3.6",
     "tailwindcss": "2.2.15",
     "tailwindcss-plugin-fancy": "3.1.0",

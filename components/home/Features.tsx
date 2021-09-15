@@ -38,7 +38,7 @@ export default function Features(props) {
   const { data } = props;
   return (
     <div className=" overflow-hidden">
-      <div className="relative max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <svg
           className="absolute top-0 left-full transform -translate-x-1/2 -translate-y-3/4 lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4"
           width={404}
@@ -76,25 +76,30 @@ export default function Features(props) {
         <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
           <div className="lg:col-span-1">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-100 sm:text-4xl">
-              A better way to build tech solutions
+              {data.page.featuresSectionTitle}
             </h2>
           </div>
           <dl className="mt-10 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:mt-0 lg:col-span-2">
-            {features.map((feature) => (
-              <div key={feature.name}>
-                <dt>
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-600 text-white">
-                    <feature.icon className="h-6 w-6" aria-hidden="true" />
-                  </div>
-                  <p className="mt-5 text-lg leading-6 font-medium text-gray-100">
-                    {feature.name}
-                  </p>
-                </dt>
-                <dd className="mt-2 text-base text-gray-400">
-                  {feature.description}
-                </dd>
-              </div>
-            ))}
+            {data.page.features
+              .map((item) => ({
+                ...item,
+                icon: iconStringToIcon(item.icon),
+              }))
+              .map((feature) => (
+                <div key={feature.name}>
+                  <dt>
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-primary-600 text-white">
+                      <feature.icon className="h-6 w-6" aria-hidden="true" />
+                    </div>
+                    <p className="mt-5 text-lg leading-6 font-medium text-gray-100">
+                      {feature.name}
+                    </p>
+                  </dt>
+                  <dd className="mt-2 text-base text-gray-400">
+                    {feature.description}
+                  </dd>
+                </div>
+              ))}
           </dl>
         </div>
       </div>

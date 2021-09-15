@@ -79,6 +79,12 @@ query MyQuery($locale: SiteLocale = en) {
     processPart4Label
     processPart4Title
     processPart4Description
+    featuresSectionTitle
+    features {
+      name
+      description
+      icon
+    }
   }
 }
 `;
