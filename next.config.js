@@ -11,6 +11,5 @@ module.exports = (phase, config) =>
         domains: ["www.datocms-assets.com"],
       },
       layer0SourceMaps: true,
-      target: "serverless",
     })
   );
