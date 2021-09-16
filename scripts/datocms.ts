@@ -20,7 +20,7 @@ async function fetchFromDatoCms({ query, variables, preview }) {
 export async function createSubscriptionProps(payload) {
   const data = await fetchFromDatoCms(payload);
   return {
-    subscription: payload.context?.preview
+    subscription: payload?.preview
       ? {
           ...payload,
           initialData: data,
