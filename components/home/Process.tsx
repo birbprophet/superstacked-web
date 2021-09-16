@@ -127,7 +127,7 @@ export default function Process(props) {
           id={data.page.processPart3Label.toLowerCase()}
         ></div>
         <div className="h-10 w-10 rounded-full flex bg-gradient-to-br from-primary-400 to-primary-600">
-          <div className="text-white text-lg font-bold m-auto">2</div>
+          <div className="text-white text-lg font-bold m-auto">3</div>
         </div>
         <div className="mt-4">
           <div className="font-bold text-3xl text-transparent bg-gradient-to-r from-primary-300 to-primary-500 bg-clip-text">

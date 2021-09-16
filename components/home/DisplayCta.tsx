@@ -12,6 +12,7 @@ const DynamicFakeBrowser = dynamic(
 );
 
 export default function DisplayCta(props) {
+  const { data } = props;
   return (
     <>
       <div className="rounded-t-xl ring-1 ring-black ring-opacity-10 max-w-lg lg:max-w-4xl mx-auto hidden lg:grid">
@@ -28,7 +29,7 @@ export default function DisplayCta(props) {
           </div>
           <div className="border border-black border-opacity-5 rounded-md overflow-hidden shadow-sm">
             <div className="bg-gradient-to-b from-white to-gray-50 text-sm py-1.5 text-center">
-              <span>your-next-app-preview.superstacked.dev</span>
+              <span>{data.page.displayCtaFakeUrl}</span>
             </div>
           </div>
         </div>
@@ -42,7 +43,7 @@ export default function DisplayCta(props) {
                     "inset 0 -0.1666666667em 0 0 #fff, inset 0 -0.3333333333em 0 0 #BAE6FD",
                 }}
               >
-                your next app
+                {data.page.displayCtaFakeAppName}
               </div>
               <div className="flex space-x-2 items-center">
                 <div className="bg-gray-200 h-6 w-14 rounded" />
@@ -59,21 +60,20 @@ export default function DisplayCta(props) {
         <div className="bg-gray-700 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-11 lg:gap-4">
           <div className="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20 lg:col-span-6">
             <div className="lg:self-center flex flex-col h-full">
-              <h2 className="text-4xl font-extrabold text-white sm:text-5xl sm:leading-none">
-                <span className="block text-primary-300">Start small.</span>
-                <span className="block">Think global scale.</span>
+              <h2 className="text-4xl font-extrabold text-white sm:text-5xl sm:leading-none font-serif">
+                <span className="block text-primary-300">
+                  {data.page.displayCtaTitlePart1}
+                </span>
+                <span className="block">{data.page.displayCtaTitlePart2}</span>
               </h2>
               <p className="mt-4 lg:mt-8 text-lg leading-6 text-gray-200">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                malesuada in justo sed consequat. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nam malesuada in justo sed
-                consequat.
+                {data.page.displayCtaDescription}
               </p>
               <div className="flex-1"></div>
               <div>
                 <Link href="/signup">
                   <a className="mt-8 bg-white border border-transparent rounded-md shadow px-6 py-3 inline-flex items-center text-base font-semibold text-gray-700 hover:text-gray-800 hover:bg-gray-100">
-                    Get Started
+                    {data.page.displayCtaButtonText}
                   </a>
                 </Link>
               </div>
