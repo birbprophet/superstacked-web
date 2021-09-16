@@ -8,9 +8,9 @@ import Process from "@/components/home/Process";
 import DisplayCta from "@/components/home/DisplayCta";
 import Features from "@/components/home/Features";
 import { useQuerySubscription } from "react-datocms";
+import CookiesBanner from "@/components/layout/CookiesBanner";
 
 export async function getStaticProps(context) {
-  console.log(context);
   const props = await createSubscriptionProps({
     query: HOME_QUERY,
     variables: { locale: "en" },
@@ -24,7 +24,6 @@ export async function getStaticProps(context) {
 
 export default function Home(props) {
   const { subscription } = props;
-  console.log(subscription.enabled);
   const { data } = useQuerySubscription(subscription);
 
   return (
@@ -36,6 +35,7 @@ export default function Home(props) {
       <Process {...{ data }} />
       <DisplayCta {...{ data }} />
       <Features {...{ data }} />
+      <CookiesBanner {...{ data }} />
     </>
   );
 }

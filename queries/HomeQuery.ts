@@ -25,6 +25,12 @@ query MyQuery($locale: SiteLocale = en) {
     customSectionDescription
     callToActionButtonText
   }
+  legal(locale: $locale) {
+    cookiesMessagePart1
+    cookiesMessagePart2
+    cookiesMessagePart3
+    acceptCookiesMessage
+  }
   page: home(locale: $locale) {
     seoTitle
     seoDescription
