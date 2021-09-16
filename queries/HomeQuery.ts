@@ -91,6 +91,12 @@ query MyQuery($locale: SiteLocale = en) {
       description
       icon
     }
+    displayCtaFakeUrl
+    displayCtaFakeAppName
+    displayCtaTitlePart1
+    displayCtaTitlePart2
+    displayCtaDescription
+    displayCtaButtonText
   }
 }
 `;

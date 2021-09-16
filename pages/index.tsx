@@ -4,6 +4,7 @@ import { HOME_QUERY } from "@/queries/HomeQuery";
 import { createSubscriptionProps } from "@/scripts/datocms";
 import Hero from "@/components/home/Hero";
 import LogoCloud from "@/components/home/LogoCloud";
+import Evaluate from "@/components/home/Evaluate";
 import Process from "@/components/home/Process";
 import DisplayCta from "@/components/home/DisplayCta";
 import Features from "@/components/home/Features";
@@ -34,6 +35,7 @@ export default function Home(props) {
       <LogoCloud {...{ data }} />
       <Process {...{ data }} />
       <DisplayCta {...{ data }} />
+      <Evaluate {...{ data }} />
       <Features {...{ data }} />
       <CookiesBanner {...{ data }} />
     </>
