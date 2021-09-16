@@ -48,7 +48,7 @@ export default function Evaluate(props) {
             className="focus:ring-primary-300 focus:border-primary-200 block w-full pl-[5.2rem] sm:pl-[6.1rem] border-gray-200 border-2 rounded-md bg-transparent font-medium text-xl sm:text-2xl text-gray-200"
             placeholder="superstacked.dev"
             value={url}
-            onChange={(e) => setUrl(e.target.value)}
+            onChange={(e) => setUrl(e.target.value.toLowerCase())}
           />
         </div>
         {urlIsValid ? (
