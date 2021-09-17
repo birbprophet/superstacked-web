@@ -10,8 +10,6 @@ import DisplayCta from "@/components/home/DisplayCta";
 import Features from "@/components/home/Features";
 import { useQuerySubscription } from "react-datocms";
 import CookiesBanner from "@/components/layout/CookiesBanner";
-import { useEffect } from "react";
-import redirect from "nextjs-redirect";
 
 export async function getStaticProps(context) {
   const props = await createSubscriptionProps({
@@ -28,15 +26,6 @@ export async function getStaticProps(context) {
 export default function Home(props) {
   const { subscription } = props;
   const { data } = useQuerySubscription(subscription);
-  useEffect(() => {
-    if (
-      window &&
-      window?.location?.href &&
-      window?.location?.href?.includes("https://www.superstacked.dev")
-    ) {
-      redirect("https://superstacked.dev/");
-    }
-  }, []);
 
   return (
     <>

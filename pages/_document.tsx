@@ -25,7 +25,8 @@ class MyDocument extends Document {
           <script
             dangerouslySetInnerHTML={{
               __html: snippet.min({
-                apiKey: process.env.NEXT_SEGMENT_ANALYTICS_WRITE_KEY,
+                apiKey: "p09PvD5VvEeQmnKyN3tFeRPlnVDlJaU5",
+                page: true,
               }),
             }}
           />
