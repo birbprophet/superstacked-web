@@ -23,6 +23,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <script
+            defer
             dangerouslySetInnerHTML={{
               __html: snippet.min({
                 apiKey: "p09PvD5VvEeQmnKyN3tFeRPlnVDlJaU5",
