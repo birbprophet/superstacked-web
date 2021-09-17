@@ -11,7 +11,10 @@ export default function Evaluate(props) {
   const urlIsValid = checkIsValidUrl(finalUrl);
 
   return (
-    <div className="py-16 px-4 sm:py-24 sm:px-6 lg:px-8" id="evaluate">
+    <div
+      className="pt-4 pb-20 px-4 sm:pt-10 sm:pb-24 sm:px-6 lg:px-8 flex flex-col"
+      id="evaluate"
+    >
       <div className="max-w-7xl mx-auto ">
         <div className="text-center">
           <p className="mt-1 text-5xl font-bold sm:text-6xl sm:tracking-tight lg:text-7xl font-serif text-white">
