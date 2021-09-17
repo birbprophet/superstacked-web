@@ -3,6 +3,7 @@ import Router from "@layer0/rum/Router";
 import { DefaultSeo } from "next-seo";
 import appConfig from "@/utils/appConfig";
 import Head from "next/head";
+import NextRouter from "next/router";
 import "@/styles/globals.css";
 
 new Metrics({
@@ -15,6 +16,11 @@ new Metrics({
     .match("/contact", ({ setPageLabel }) => setPageLabel("contact"))
     .match("/start", ({ setPageLabel }) => setPageLabel("start")),
 }).collect();
+
+NextRouter.events.on("routeChangeComplete", (url) => {
+  // @ts-ignore
+  window?.analytics?.page?.(url);
+});
 
 function MyApp({ Component, pageProps }) {
   return (

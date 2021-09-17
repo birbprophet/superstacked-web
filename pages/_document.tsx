@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-
 import appConfig from "@/utils/appConfig";
+import * as snippet from "@segment/snippet";
 
 // Need to create a custom _document because i18n support is not compatible with `next export`.
 class MyDocument extends Document {
@@ -22,10 +22,13 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap"
             rel="stylesheet"
           />
-          {/* <link
-            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap"
-            rel="stylesheet"
-          /> */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: snippet.min({
+                apiKey: process.env.NEXT_SEGMENT_ANALYTICS_WRITE_KEY,
+              }),
+            }}
+          />
         </Head>
         <body className="scrollbar scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-700">
           <Main />
