@@ -4,9 +4,7 @@ export default function Evaluate(props) {
   const { data } = props;
   const [url, setUrl] = useState("");
   const checkIsValidUrl = (url) => {
-    return url.match(
-      /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
-    );
+    return url.match(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})\/?$/);
   };
   const finalUrl = "https://" + url;
   const urlIsValid = checkIsValidUrl(finalUrl);
