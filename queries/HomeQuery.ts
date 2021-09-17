@@ -85,18 +85,24 @@ query MyQuery($locale: SiteLocale = en) {
     processPart4Label
     processPart4Title
     processPart4Description
-    featuresSectionTitle
-    features {
-      name
-      description
-      icon
-    }
+    evaluateTitlePart1
+    evaluateTitlePart2
+    evaluateDescriptionPart1
+    evaluateDescriptionPart2
+    evaluateDescriptionPart3
+    evaluateButtonText
     displayCtaFakeUrl
     displayCtaFakeAppName
     displayCtaTitlePart1
     displayCtaTitlePart2
     displayCtaDescription
     displayCtaButtonText
+    featuresSectionTitle
+    features {
+      name
+      description
+      icon
+    }
   }
 }
 `;

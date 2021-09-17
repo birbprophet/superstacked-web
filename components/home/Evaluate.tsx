@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 export default function Evaluate(props) {
+  const { data } = props;
   const [url, setUrl] = useState("");
   const checkIsValidUrl = (url) => {
     return url.match(
@@ -18,24 +19,22 @@ export default function Evaluate(props) {
       <div className="max-w-7xl mx-auto ">
         <div className="text-center">
           <p className="mt-1 text-5xl font-bold sm:text-6xl sm:tracking-tight lg:text-7xl font-serif text-white">
-            The Need For{" "}
+            {data.page.evaluateTitlePart1}{" "}
             <span className="text-transparent bg-gradient-to-br bg-clip-text from-primary-400 to-primary-100">
-              Speed
+              {data.page.evaluateTitlePart2}
             </span>
           </p>
           <p className="max-w-3xl mt-5 mx-auto text-lg sm:text-xl text-gray-400">
-            How does your current site or web app perform? Find out by
-            evaluating your site's performance below. You can also compare it
-            against{" "}
+            {data.page.evaluateDescriptionPart1.trim()}{" "}
             <a
               href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsuperstacked.dev%2F&tab=desktop"
               target="_blank"
               rel="noopener"
               className="underline text-gray-300"
             >
-              our site
+              {data.page.evaluateDescriptionPart2.trim()}
             </a>
-            .
+            {data.page.evaluateDescriptionPart3.trim()}
           </p>
         </div>
       </div>
@@ -80,7 +79,7 @@ export default function Evaluate(props) {
                 : "from-gray-600 to-gray-600"
             } focus:outline-none mt-6`}
           >
-            Evaluate Your Site
+            {data.page.evaluateButtonText.trim()}
           </button>
         )}
       </div>
