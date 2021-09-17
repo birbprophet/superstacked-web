@@ -32,11 +32,11 @@ export default function Home(props) {
     if (
       window &&
       window?.location?.href &&
-      window.location.href.includes("https://www.superstacked.dev")
+      window?.location?.href?.includes("https://www.superstacked.dev")
     ) {
       redirect("https://superstacked.dev/");
     }
-  }, [window]);
+  }, []);
 
   return (
     <>
