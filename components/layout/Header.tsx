@@ -71,8 +71,8 @@ export default function Header(props) {
                               }))
                               .map((item) => (
                                 <Link
-                                  href={`/service#${item.title.toLowerCase()}`}
-                                  key={item.title}
+                                  href={`/services#${item.name.toLowerCase()}`}
+                                  key={item.name}
                                 >
                                   <a className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-750">
                                     <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white sm:h-12 sm:w-12">
@@ -83,7 +83,7 @@ export default function Header(props) {
                                     </div>
                                     <div className="ml-4">
                                       <p className="text-base font-medium text-gray-100">
-                                        {item.title}
+                                        {item.name}
                                       </p>
                                       <p className="mt-1 text-sm text-gray-400">
                                         {item.description}
@@ -177,8 +177,8 @@ export default function Header(props) {
                       }))
                       .map((item) => (
                         <Link
-                          key={item.title}
-                          href={`/service#${item.title.toLowerCase()}`}
+                          key={item.name}
+                          href={`/services#${item.name.toLowerCase()}`}
                         >
                           <a className="-m-3 flex items-center p-3 rounded-lg hover:bg-gray-700">
                             <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-primary-600 text-white sm:h-12 sm:w-12">
@@ -188,7 +188,7 @@ export default function Header(props) {
                               />
                             </div>
                             <div className="ml-4 text-base font-medium text-gray-100">
-                              {item.title}
+                              {item.name}
                             </div>
                           </a>
                         </Link>

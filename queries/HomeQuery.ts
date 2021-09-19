@@ -10,7 +10,7 @@ query MyQuery($locale: SiteLocale = en) {
     }
   }
   allServices(locale: $locale) {
-    title
+    name
     description
     icon
   }
