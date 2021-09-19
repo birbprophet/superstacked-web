@@ -66,7 +66,7 @@ export default function Process(props) {
       </div>
       <div className="flex flex-col text-center items-center">
         <div
-          className="h-32 w-0.5 bg-gradient-to-b from-primary-300 to-primary-400"
+          className="h-32 w-0.5 bg-gradient-to-b from-transparent sm:from-primary-300 to-primary-400"
           id={data.page.processPart2Label.toLowerCase()}
         ></div>
         <div className="h-10 w-10 rounded-full flex bg-gradient-to-br from-primary-400 to-primary-600">
@@ -123,7 +123,7 @@ export default function Process(props) {
       </div>
       <div className="flex flex-col text-center items-center">
         <div
-          className="h-32 w-0.5 bg-gradient-to-b from-primary-300 to-primary-400"
+          className="h-32 w-0.5 bg-gradient-to-b from-transparent sm:from-primary-300 to-primary-400"
           id={data.page.processPart3Label.toLowerCase()}
         ></div>
         <div className="h-10 w-10 rounded-full flex bg-gradient-to-br from-primary-400 to-primary-600">
@@ -163,7 +163,7 @@ export default function Process(props) {
             <div className="w-0.5 bg-gradient-to-b from-gray-500 to-primary-300 h-1/4"></div>
           </div>
           <div className="flex-1 px-4 sm:px-10 py-16 md:mt-8 flex flex-col space-y-8 sm:text-left">
-            {data.page.processPart2Blocks.map((item) => (
+            {data.page.processPart3Blocks.map((item) => (
               <div className="flex flex-1" key={item.title}>
                 <div className="flex flex-col m-auto">
                   <div className="text-2xl font-bold text-gray-200 tracking-tight">
