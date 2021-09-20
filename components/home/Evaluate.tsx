@@ -27,7 +27,7 @@ export default function Evaluate(props) {
             <a
               href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsuperstacked.dev%2F&tab=desktop"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="underline text-gray-300"
             >
               {data.page.evaluateDescriptionPart2.trim()}
@@ -55,7 +55,7 @@ export default function Evaluate(props) {
           <a
             href={`https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2F${url}`}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <button
               type="button"

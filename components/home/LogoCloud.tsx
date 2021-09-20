@@ -14,7 +14,7 @@ export default function LogoCloud(props) {
               key={item.name}
               href={item.url}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="col-span-1 flex justify-center md:col-span-1 lg:col-span-1"
             >
               <Image
@@ -29,7 +29,7 @@ export default function LogoCloud(props) {
             className="hidden col-span-1 md:flex justify-center md:col-span-1 lg:col-span-1"
             href={data.page.logoCloud[4].url}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <Image
               src={data.page.logoCloud[4].logo.url}

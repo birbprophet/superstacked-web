@@ -24,7 +24,7 @@ export default function ContactSection(props) {
                 className="font-bold text-xl text-primary-50"
                 href="https://calendly.com/superstacked/30min"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 {data.contact.contactBookMeetingText} &rarr;
               </a>
@@ -223,7 +223,7 @@ export default function ContactSection(props) {
                           className="font-bold text-primary-50"
                           href="https://calendly.com/superstacked/30min"
                           target="_blank"
-                          rel="noopener"
+                          rel="noopener noreferrer"
                         >
                           {data.contact.contactBookMeetingText} &rarr;
                         </a>
