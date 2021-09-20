@@ -1,4 +1,4 @@
-export const CONTACT_QUERY = `
+export const SERVICES_QUERY = `
 query MyQuery($locale: SiteLocale = en) {
   site: _site(locale: $locale) {
     globalSeo {
@@ -11,8 +11,27 @@ query MyQuery($locale: SiteLocale = en) {
   }
   allServices(locale: $locale) {
     name
+    title
     description
     icon
+    viewMoreButtonText
+    sectionTitle
+    sectionDescription
+    sectionImage {
+      responsiveImage(imgixParams: { fit: crop, w: 400, h: 400 }) {
+        alt
+        aspectRatio
+        base64
+        bgColor
+        height
+        sizes
+        src
+        srcSet
+        title
+        webpSrcSet
+        width
+      }
+    }
   }
   menu(locale: $locale) {
     servicesDropdownButtonText
@@ -47,7 +66,7 @@ query MyQuery($locale: SiteLocale = en) {
     contactFormSuccessMessage
     contactFormFailureMessage
   }
-  page: contact(locale: $locale) {
+  page: service(locale: $locale) {
     seoTitle
     seoDescription
   }
