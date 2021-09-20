@@ -18,7 +18,7 @@ query MyQuery($locale: SiteLocale = en) {
     sectionTitle
     sectionDescription
     sectionImage {
-      responsiveImage(imgixParams: { fit: crop, w: 400, h: 400 }) {
+      responsiveImage(imgixParams: { fit: crop, w: 400, h: 500 }) {
         alt
         aspectRatio
         base64

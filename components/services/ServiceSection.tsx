@@ -12,7 +12,7 @@ export default function ServiceSection(props) {
         <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
           {serviceData.name}
         </span>
-        <h1 className="mt-4 text-5xl tracking-tight font-extrabold text-white sm:text-7xl md:text-[5rem] font-serif cursor-default">
+        <h1 className="mt-4 text-5xl tracking-tight font-extrabold text-white sm:text-6xl font-serif cursor-default">
           {serviceData.title}
         </h1>
         <p className="mt-5 max-w-md mx-auto text-xl text-gray-400 sm:text-2xl sm:max-w-3xl sm:mt-8 md:text-2xl md:max-w-3xl">
