@@ -31,6 +31,26 @@ query MyQuery($locale: SiteLocale = en) {
     cookiesMessagePart3
     acceptCookiesMessage
   }
+  contact(locale: $locale) {
+    contactTitle
+    contactDescription
+    contactInformationHeader
+    contactInformationDescription
+    contactPhoneNumber
+    contactEmail
+    contactFormTitle
+    contactFormNameLabel
+    contactFormCompanyLabel
+    contactFormEmailLabel
+    contactFormPhoneLabel
+    contactFormSubjectLabel
+    contactFormMessageLabel
+    contactFormOptionalTag
+    contactFormMessageTag
+    contactFormSubmitButtonText
+    contactFormSuccessMessage
+    contactFormFailureMessage
+  }
   page: home(locale: $locale) {
     seoTitle
     seoDescription

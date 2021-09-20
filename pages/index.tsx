@@ -1,20 +1,24 @@
+import { createSubscriptionProps } from "@/scripts/datocms";
+import { useQuerySubscription } from "react-datocms";
+import { GetStaticPropsContext } from "next";
+
 import DatoCmsMetadata from "@/components/meta/DatoCmsMetadata";
 import Header from "@/components/layout/Header";
-import { HOME_QUERY } from "@/queries/HomeQuery";
-import { createSubscriptionProps } from "@/scripts/datocms";
 import Hero from "@/components/home/Hero";
 import LogoCloud from "@/components/home/LogoCloud";
 import Evaluate from "@/components/home/Evaluate";
 import Process from "@/components/home/Process";
 import DisplayCta from "@/components/home/DisplayCta";
 import Features from "@/components/home/Features";
-import { useQuerySubscription } from "react-datocms";
+import ContactSection from "@/components/contact/ContactSection";
 import CookiesBanner from "@/components/layout/CookiesBanner";
 
-export async function getStaticProps(context) {
+import { HOME_QUERY } from "@/queries/HomeQuery";
+
+export async function getStaticProps(context: GetStaticPropsContext) {
   const props = await createSubscriptionProps({
     query: HOME_QUERY,
-    variables: { locale: "en" },
+    variables: { locale: context.locale },
     preview: context.preview,
   });
 
@@ -37,6 +41,7 @@ export default function Home(props) {
       <DisplayCta {...{ data }} />
       <Evaluate {...{ data }} />
       <Features {...{ data }} />
+      <ContactSection {...{ data }} />
       <CookiesBanner {...{ data }} />
     </>
   );

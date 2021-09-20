@@ -31,6 +31,7 @@ class MyDocument extends Document {
             }}();`,
             }}
           />
+          <script src="https://kwesforms.com/v2/kwes-script.js" defer />
         </Head>
         <body className="scrollbar scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-700">
           <Main />
