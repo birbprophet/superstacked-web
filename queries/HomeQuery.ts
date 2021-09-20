@@ -82,7 +82,19 @@ query MyQuery($locale: SiteLocale = en) {
       description
     }
     processPart1Image {
-      url
+      responsiveImage(imgixParams: { fit: crop, w: 480, h: 720 }) {
+        alt
+        aspectRatio
+        base64
+        bgColor
+        height
+        sizes
+        src
+        srcSet
+        title
+        webpSrcSet
+        width
+      }
     }
     processPart2Label
     processPart2Title
@@ -92,7 +104,19 @@ query MyQuery($locale: SiteLocale = en) {
       description
     }
     processPart2Image {
-      url
+      responsiveImage(imgixParams: { fit: crop, w: 480, h: 720 }) {
+        alt
+        aspectRatio
+        base64
+        bgColor
+        height
+        sizes
+        src
+        srcSet
+        title
+        webpSrcSet
+        width
+      }
     }
     processPart3Label
     processPart3Title
@@ -102,7 +126,19 @@ query MyQuery($locale: SiteLocale = en) {
       description
     }
     processPart3Image {
-      url
+      responsiveImage(imgixParams: { fit: crop, w: 480, h: 720 }) {
+        alt
+        aspectRatio
+        base64
+        bgColor
+        height
+        sizes
+        src
+        srcSet
+        title
+        webpSrcSet
+        width
+      }
     }
     processPart4Label
     processPart4Title

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Image } from "react-datocms";
 
 export default function Process(props) {
   const { data } = props;
@@ -30,12 +30,8 @@ export default function Process(props) {
           <div className="hidden sm:flex flex-1 px-4 sm:px-10 mt-16">
             <div className="m-auto">
               <Image
-                src={data.page.processPart1Image.url}
-                title={data.page.processPart1Title}
-                alt={data.page.processPart1Title}
-                className="rounded-2xl object-cover overflow-hidden"
-                width={480}
-                height={720}
+                data={data.page.processPart1Image.responsiveImage}
+                className="rounded-xl"
               />
             </div>
           </div>
@@ -110,12 +106,8 @@ export default function Process(props) {
           <div className="hidden sm:flex flex-1 px-4 sm:px-10 mt-16">
             <div className="m-auto">
               <Image
-                src={data.page.processPart1Image.url}
-                title={data.page.processPart1Title}
-                alt={data.page.processPart1Title}
-                className="rounded-2xl object-cover overflow-hidden"
-                width={480}
-                height={720}
+                data={data.page.processPart2Image.responsiveImage}
+                className="rounded-xl"
               />
             </div>
           </div>
@@ -144,12 +136,8 @@ export default function Process(props) {
           <div className="hidden sm:flex flex-1 px-4 sm:px-10 mt-16">
             <div className="m-auto">
               <Image
-                src={data.page.processPart1Image.url}
-                title={data.page.processPart1Title}
-                alt={data.page.processPart1Title}
-                className="rounded-2xl object-cover overflow-hidden"
-                width={480}
-                height={720}
+                data={data.page.processPart3Image.responsiveImage}
+                className="rounded-xl"
               />
             </div>
           </div>
