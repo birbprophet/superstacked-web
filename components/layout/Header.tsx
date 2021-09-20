@@ -125,7 +125,7 @@ export default function Header(props) {
               ))}
             </Popover.Group>
             <div className="flex items-center md:ml-12">
-              <Link href="/start">
+              <Link href="/contact">
                 <a className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-5 py-2.5 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-650 hover:bg-primary-700">
                   {data.menu.callToActionButtonText}
                 </a>
@@ -212,7 +212,7 @@ export default function Header(props) {
                   ))}
                 </div>
                 <div className="mt-6">
-                  <Link href="/start">
+                  <Link href="/contact">
                     <a className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-650 hover:bg-primary-700">
                       {data.menu.callToActionButtonText}
                     </a>

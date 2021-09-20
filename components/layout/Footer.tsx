@@ -1,15 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
 import Link from "next/link";
-const navigation = {
-  main: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Accessibility", href: "#" },
-    { name: "Partners", href: "#" },
-  ],
-};
 
 export default function Footer(props) {
   const { data } = props;

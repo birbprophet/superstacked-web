@@ -1,5 +1,6 @@
-import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
+import { CalendarIcon, MailIcon, PhoneIcon } from "@heroicons/react/outline";
 import { useForm } from "@formspree/react";
+import Link from "next/link";
 
 export default function ContactSection(props) {
   const { data } = props;
@@ -18,6 +19,15 @@ export default function ContactSection(props) {
               <p className="mt-6 text-xl text-gray-300 max-w-3xl">
                 {data.contact.contactDescription}
               </p>
+              <br />
+              <a
+                className="font-bold text-xl text-primary-50"
+                href="https://calendly.com/superstacked/30min"
+                target="_blank"
+                rel="noopener"
+              >
+                {data.contact.contactBookMeetingText} &rarr;
+              </a>
             </div>
           </div>
         </div>
@@ -178,7 +188,9 @@ export default function ContactSection(props) {
                   </p>
                   <dl className="mt-8 space-y-6">
                     <dt>
-                      <span className="sr-only">Phone number</span>
+                      <span className="sr-only">
+                        {data.contact.contactFormPhoneLabel}
+                      </span>
                     </dt>
                     <dd className="flex text-base text-primary-50">
                       <PhoneIcon
@@ -190,7 +202,9 @@ export default function ContactSection(props) {
                       </span>
                     </dd>
                     <dt>
-                      <span className="sr-only">Email</span>
+                      <span className="sr-only">
+                        {data.contact.contactFormEmailLabel}
+                      </span>
                     </dt>
                     <dd className="flex text-base text-primary-50">
                       <MailIcon
@@ -198,6 +212,22 @@ export default function ContactSection(props) {
                         aria-hidden="true"
                       />
                       <span className="ml-3">{data.contact.contactEmail}</span>
+                    </dd>
+                    <dd className="flex text-base text-primary-50">
+                      <CalendarIcon
+                        className="flex-shrink-0 w-6 h-6 text-primary-200"
+                        aria-hidden="true"
+                      />
+                      <span className="ml-3">
+                        <a
+                          className="font-bold text-primary-50"
+                          href="https://calendly.com/superstacked/30min"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          {data.contact.contactBookMeetingText} &rarr;
+                        </a>
+                      </span>
                     </dd>
                   </dl>
                 </div>

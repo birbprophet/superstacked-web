@@ -39,6 +39,7 @@ query MyQuery($locale: SiteLocale = en) {
     contactInformationDescription
     contactPhoneNumber
     contactEmail
+    contactBookMeetingText
     contactFormTitle
     contactFormNameLabel
     contactFormCompanyLabel

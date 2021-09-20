@@ -14,7 +14,7 @@ new Metrics({
     .match("/about", ({ setPageLabel }) => setPageLabel("about"))
     .match("/portfolio", ({ setPageLabel }) => setPageLabel("portfolio"))
     .match("/contact", ({ setPageLabel }) => setPageLabel("contact"))
-    .match("/start", ({ setPageLabel }) => setPageLabel("start")),
+    .match("/contact", ({ setPageLabel }) => setPageLabel("start")),
 }).collect();
 
 NextRouter.events.on("routeChangeComplete", (url) => {
