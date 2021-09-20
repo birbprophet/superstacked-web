@@ -1,7 +1,11 @@
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
+import { useForm } from "@formspree/react";
 
 export default function ContactSection(props) {
   const { data } = props;
+  const [formState, handleSubmit] = useForm("moqyrnlw");
+  const { errors, succeeded } = formState;
+
   return (
     <div className="bg-gray-800">
       <main className="overflow-hidden">
@@ -199,143 +203,157 @@ export default function ContactSection(props) {
                 </div>
                 {/* Contact form */}
                 <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-                  <h3 className="text-lg font-medium text-gray-100">
+                  <h3 className="text-lg font-medium text-gray-100 mb-4">
                     {data.contact.contactFormTitle}
                   </h3>
-                  <form
-                    action="https://kwesforms.com/api/foreign/forms/3D4VMaGfOMEzeIN1YyLd"
-                    method="POST"
-                    className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 kwes-form"
-                  >
-                    <div>
-                      <label
-                        className="block text-sm font-medium text-gray-100"
-                        htmlFor="name"
-                      >
-                        {data.contact.contactFormNameLabel}
-                      </label>
-                      <div className="mt-1">
-                        <input
-                          type="text"
-                          name="name"
-                          id="name"
-                          className="bg-gray-900 py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-gray-400 focus:border-gray-400 border-gray-500 rounded-md"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between">
+                  <form onSubmit={handleSubmit}>
+                    <div className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                      <div>
                         <label
                           className="block text-sm font-medium text-gray-100"
-                          htmlFor="company"
+                          htmlFor="name"
                         >
-                          {data.contact.contactFormCompanyLabel}
+                          {data.contact.contactFormNameLabel}
                         </label>
-                        <span className="text-sm text-gray-500">
-                          {data.contact.contactFormOptionalTag}
-                        </span>
+                        <div className="mt-1">
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            autoComplete="name"
+                            className="bg-gray-900 py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-gray-400 focus:border-gray-400 border-gray-500 rounded-md"
+                            required
+                          />
+                        </div>
                       </div>
-                      <div className="mt-1">
-                        <input
-                          type="text"
-                          name="company"
-                          id="company"
-                          className="bg-gray-900 py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-gray-400 focus:border-gray-400 border-gray-500 rounded-md"
-                        />
+                      <div>
+                        <div className="flex justify-between">
+                          <label
+                            className="block text-sm font-medium text-gray-100"
+                            htmlFor="company"
+                          >
+                            {data.contact.contactFormCompanyLabel}
+                          </label>
+                          <span className="text-sm text-gray-500">
+                            {data.contact.contactFormOptionalTag}
+                          </span>
+                        </div>
+                        <div className="mt-1">
+                          <input
+                            type="text"
+                            name="company"
+                            id="company"
+                            autoComplete="company"
+                            className="bg-gray-900 py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-gray-400 focus:border-gray-400 border-gray-500 rounded-md"
+                          />
+                        </div>
                       </div>
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-gray-100"
-                      >
-                        Email
-                      </label>
-                      <div className="mt-1">
-                        <input
-                          id="email"
-                          name="email"
-                          type="email"
-                          autoComplete="email"
-                          className="py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-primary-500 focus:border-primary-500 border-gray-300 rounded-md autofill:bg-gray-900"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between">
+                      <div>
                         <label
-                          htmlFor="phone"
+                          htmlFor="email"
                           className="block text-sm font-medium text-gray-100"
                         >
-                          Phone
+                          {data.contact.contactFormEmailLabel}
                         </label>
-                        <span
-                          id="phone-optional"
-                          className="text-sm text-gray-500"
-                        >
-                          Optional
-                        </span>
+                        <div className="mt-1">
+                          <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            autoComplete="email"
+                            className="bg-gray-900 py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-gray-400 focus:border-gray-400 border-gray-500 rounded-md"
+                            required
+                          />
+                        </div>
                       </div>
-                      <div className="mt-1">
-                        <input
-                          type="text"
-                          name="phone"
-                          id="phone"
-                          autoComplete="tel"
-                          className="py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-primary-500 focus:border-primary-500 border-gray-300 rounded-md"
-                          aria-describedby="phone-optional"
-                        />
+                      <div>
+                        <div className="flex justify-between">
+                          <label
+                            htmlFor="phone"
+                            className="block text-sm font-medium text-gray-100"
+                          >
+                            {data.contact.contactFormPhoneLabel}
+                          </label>
+                          <span
+                            id="phone-optional"
+                            className="text-sm text-gray-500"
+                          >
+                            {data.contact.contactFormOptionalTag}
+                          </span>
+                        </div>
+                        <div className="mt-1">
+                          <input
+                            type="text"
+                            name="phone"
+                            id="phone"
+                            autoComplete="tel"
+                            className="bg-gray-900 py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-gray-400 focus:border-gray-400 border-gray-500 rounded-md"
+                            aria-describedby="phone-optional"
+                          />
+                        </div>
                       </div>
-                    </div>
-                    <div className="sm:col-span-2">
-                      <label
-                        htmlFor="subject"
-                        className="block text-sm font-medium text-gray-100"
-                      >
-                        Subject
-                      </label>
-                      <div className="mt-1">
-                        <input
-                          type="text"
-                          name="subject"
-                          id="subject"
-                          className="py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-primary-500 focus:border-primary-500 border-gray-300 rounded-md"
-                        />
-                      </div>
-                    </div>
-                    <div className="sm:col-span-2">
-                      <div className="flex justify-between">
+                      <div className="sm:col-span-2">
                         <label
-                          htmlFor="message"
+                          htmlFor="subject"
                           className="block text-sm font-medium text-gray-100"
                         >
-                          Message
+                          {data.contact.contactFormSubjectLabel}
                         </label>
-                        <span
-                          id="message-max"
-                          className="text-sm text-gray-500"
+                        <div className="mt-1">
+                          <input
+                            type="text"
+                            name="subject"
+                            id="subject"
+                            className="bg-gray-900 py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-gray-400 focus:border-gray-400 border-gray-500 rounded-md"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="sm:col-span-2">
+                        <div className="flex justify-between">
+                          <label
+                            htmlFor="message"
+                            className="block text-sm font-medium text-gray-100"
+                          >
+                            {data.contact.contactFormMessageLabel}
+                          </label>
+                          <span
+                            id="message-max"
+                            className="text-sm text-gray-500"
+                          >
+                            {data.contact.contactFormMessageTag}
+                          </span>
+                        </div>
+                        <div className="mt-1">
+                          <textarea
+                            id="message"
+                            name="message"
+                            rows={4}
+                            className="bg-gray-900 py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-gray-400 focus:border-gray-400 border-gray-500 rounded-md"
+                            aria-describedby="message-max"
+                            defaultValue={""}
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="sm:col-span-2 sm:flex sm:justify-between items-center">
+                        <div
+                          className={
+                            errors?.[0] ? "text-red-300" : "text-primary-200"
+                          }
                         >
-                          Max. 500 characters
-                        </span>
+                          {errors?.[0]
+                            ? data.contact.contactFormFailureMessage
+                            : succeeded &&
+                              data.contact.contactFormSuccessMessage}
+                        </div>
+                        <button
+                          type="submit"
+                          className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:w-auto"
+                        >
+                          {data.contact.contactFormSubmitButtonText}
+                        </button>
                       </div>
-                      <div className="mt-1">
-                        <textarea
-                          id="message"
-                          name="message"
-                          rows={4}
-                          className="py-3 px-4 block w-full shadow-sm text-gray-100 focus:ring-primary-500 focus:border-primary-500 border border-gray-300 rounded-md"
-                          aria-describedby="message-max"
-                          defaultValue={""}
-                        />
-                      </div>
-                    </div>
-                    <div className="sm:col-span-2 sm:flex sm:justify-end">
-                      <button
-                        type="submit"
-                        className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 sm:w-auto"
-                      >
-                        Submit
-                      </button>
                     </div>
                   </form>
                 </div>

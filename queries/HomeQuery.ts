@@ -24,6 +24,7 @@ query MyQuery($locale: SiteLocale = en) {
     customSectionBadge
     customSectionDescription
     callToActionButtonText
+    copyrightMessage
   }
   legal(locale: $locale) {
     cookiesMessagePart1

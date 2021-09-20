@@ -12,6 +12,7 @@ import DisplayCta from "@/components/home/DisplayCta";
 import Features from "@/components/home/Features";
 import ContactSection from "@/components/contact/ContactSection";
 import CookiesBanner from "@/components/layout/CookiesBanner";
+import Footer from "@/components/layout/Footer";
 
 import { HOME_QUERY } from "@/queries/HomeQuery";
 
@@ -42,6 +43,7 @@ export default function Home(props) {
       <Evaluate {...{ data }} />
       <Features {...{ data }} />
       <ContactSection {...{ data }} />
+      <Footer {...{ data }} />
       <CookiesBanner {...{ data }} />
     </>
   );
