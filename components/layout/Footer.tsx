@@ -22,7 +22,7 @@ export default function Footer(props) {
         >
           <div className="px-5 py-2">
             <Link href="/services">
-              <a className='className="text-base text-gray-500 hover:text-gray-900'>
+              <a className='className="text-base text-gray-400 hover:text-gray-300'>
                 {data.menu.servicesDropdownButtonText}
               </a>
             </Link>
@@ -30,7 +30,7 @@ export default function Footer(props) {
           {data.menu.links.map((item) => (
             <div key={item.name} className="px-5 py-2">
               <Link href={item.path}>
-                <a className='className="text-base text-gray-500 hover:text-gray-900'>
+                <a className='className="text-base text-gray-400 hover:text-gray-300'>
                   {item.name}
                 </a>
               </Link>
@@ -38,7 +38,7 @@ export default function Footer(props) {
           ))}
         </nav>
 
-        <p className="mt-8 text-center text-base text-gray-400">
+        <p className="mt-8 text-center text-base text-gray-300">
           &copy; {data.menu.copyrightMessage}
         </p>
       </div>
