@@ -19,7 +19,7 @@ export async function getStaticProps(context) {
   };
 }
 
-export default function Home(props) {
+export default function Services(props) {
   const { subscription } = props;
   const { data } = useQuerySubscription(subscription);
 
