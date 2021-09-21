@@ -1205,10 +1205,10 @@
     webpack "^4.0.0"
     webpack-sources "^2.2.0"
 
-"@layer0/prefetch@3.16.10":
-  version "3.16.10"
-  resolved "https://registry.yarnpkg.com/@layer0/prefetch/-/prefetch-3.16.10.tgz#dad8040338a2f2e0f78f087cd32f3f128139e8ad"
-  integrity sha512-ntcjXf7LncsACJYggYFovmHM832OgQLGyEypNOcfeRGJRDHAhPUJ2MtU+eXk/zaHuMsnBHkQ92TJAozgY2dPMg==
+"@layer0/prefetch@3.16.11":
+  version "3.16.11"
+  resolved "https://registry.yarnpkg.com/@layer0/prefetch/-/prefetch-3.16.11.tgz#424b1d090fb111d2b69172098db17d88d92be4c0"
+  integrity sha512-+7Fqn4Xj1w6ojD1zeKRlM9g4v1CK/IkQhB1a4RpEOUuD84jVvWLfDjPoqozXFZuFP83dFdnV5byUxv3CoRN3CA==
   dependencies:
     cheerio "^1.0.0-rc.3"
     json-query "^2.2.2"
@@ -1219,10 +1219,10 @@
     workbox-routing "^5.1.2"
     workbox-strategies "^5.1.2"
 
-"@layer0/react@3.16.10":
-  version "3.16.10"
-  resolved "https://registry.yarnpkg.com/@layer0/react/-/react-3.16.10.tgz#c9d8b3d211daff0168d7e96692e465efb1de77c7"
-  integrity sha512-UyNrmxMQG4slgEcngy7Lrrls39Gh/ruV6HJYtJjztY9aXFkF1+hmN3F7Bgp36xzldniRpr6Lf9ZcUJY2MU3IrA==
+"@layer0/react@3.16.11":
+  version "3.16.11"
+  resolved "https://registry.yarnpkg.com/@layer0/react/-/react-3.16.11.tgz#2e91363c32a32eab45a9be981da4c611d9b8d8be"
+  integrity sha512-k+0EcERBbvuzGdA5gpO2zp389zYsP2vedea5qOM+V0OVkkwiP55YkusIYmqEC3I038CNH1fVLsbYTmMUEb9gEg==
   dependencies:
     react-merge-refs "^1.1.0"
 
