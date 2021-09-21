@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 export default function ServiceSection(props) {
   const { data, serviceData } = props;
   return (
-    <main
+    <div
       className="py-16 mx-auto max-w-5xl px-4 sm:py-24"
       id={serviceData.name.toLowerCase()}
     >
@@ -54,6 +54,6 @@ export default function ServiceSection(props) {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
