@@ -45,7 +45,7 @@ export default function ServiceSection(props) {
               }}
             ></div>
             <div className="mt-3 rounded-md shadow sm:mt-8">
-              <Link href="/contact">
+              <Link href={`/portfolio#${serviceData.name.toLowerCase()}`}>
                 <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-650 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 whitespace-nowrap">
                   {serviceData.viewMoreButtonText}
                 </a>
