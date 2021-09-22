@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Image } from "react-datocms";
-import ReactMarkdown from "react-markdown";
 
 export default function ServiceSection(props) {
   const { data, serviceData } = props;
@@ -17,7 +16,7 @@ export default function ServiceSection(props) {
           {serviceData.title}
         </h1>
         <p className="mt-5 max-w-md mx-auto text-xl text-gray-400 sm:text-2xl sm:max-w-3xl sm:mt-8 md:text-2xl md:max-w-3xl">
-          <ReactMarkdown>{serviceData.description}</ReactMarkdown>
+          {serviceData.description}
         </p>
         <div className="mt-8 max-w-md mx-auto sm:flex sm:justify-center md:mt-10">
           <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
@@ -35,9 +34,16 @@ export default function ServiceSection(props) {
             <h2 className="text-3xl font-extrabold tracking-tight text-white">
               {serviceData.sectionTitle}
             </h2>
-            <p className="mt-4 max-w-3xl text-lg text-primary-100">
-              <ReactMarkdown>{serviceData.sectionDescription}</ReactMarkdown>
-            </p>
+            <div
+              className="mt-4 max-w-3xl text-lg text-primary-100"
+              dangerouslySetInnerHTML={{
+                __html:
+                  serviceData?.sectionDescription?.replaceAll?.(
+                    "\n",
+                    "<br />"
+                  ) ?? "",
+              }}
+            ></div>
             <div className="mt-3 rounded-md shadow sm:mt-8">
               <Link href="/contact">
                 <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-650 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 whitespace-nowrap">
