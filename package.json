@@ -43,7 +43,7 @@
     "@types/sanitize-html": "2.3.2",
     "@types/tiny-json-http": "7.3.1",
     "ansi-regex": "6.0.1",
-    "autoprefixer": "10.3.6",
+    "autoprefixer": "10.4.7",
     "commitizen": "4.2.4",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
